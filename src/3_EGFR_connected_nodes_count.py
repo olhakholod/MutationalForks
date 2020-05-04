@@ -1,30 +1,21 @@
-fhand = open('BioGRID_Human_Interactome_EGFR_results.txt')
+import pprint
 
-words = list()
+counts = {}
 
-for line in fhand:
-	line = line.rstrip()
-	if not line.startswith('>EGFR'):
-		continue
+with open('connected_nodes.txt', 'r') as filehandle:
+    
+    for i in filehandle:
 
-	words = line.split()
-#	print(words[0])
+        node = i.split('\t')[0].rstrip()
+        
+        if node not in counts:
+            counts[node] = 1
 
-	path = words[0]
-	pieces = path.split('>')
-#	print(pieces[2])
-	conn_node = pieces[2]
+        else:
+            counts[node] += 1
 
-counts = dict()
+for i in sorted (counts) : 
+#    print ((i, counts[i]), end = " ") 
+    pprint.pprint(counts, width = 1)
 
-for node in conn_node:
-    counts[node] = counts.get(node, 0) + 1 
-
-maxval = None
-maxkey = None
-for key,val in counts.items() :
-    if val > maxval:
-        maxval = val
-        maxkey = key   
-
-print(maxkey, maxval)
+#print(counts)
