@@ -1,8 +1,8 @@
-fhand = open('BioGRID_Human_Interactome_EGFR_results.txt')
+fhand = open('BioGRID_Human_Interactome_KRAS_results.txt')
 
 for line in fhand:
 	line = line.rstrip()
-	if not line.startswith('>EGFR'):
+	if not line.startswith('>KRAS'):
 		continue
 
 	words = line.split()

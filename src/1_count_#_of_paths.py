@@ -1,4 +1,4 @@
-fhand = open('BioGRID_Human_Interactome_EGFR_results.txt')
+fhand = open('BioGRID_Human_Interactome_KRAS_results.txt')
 
 count = 0
 
