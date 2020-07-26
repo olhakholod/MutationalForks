@@ -1,8 +1,8 @@
-fhand = open('BioGRID_Human_Interactome_ALK_results.txt')
+fhand = open('GNA11_PathwayCommons_directed.txt')
 
 for line in fhand:
 	line = line.rstrip()
-	if not line.startswith('>ALK'):
+	if not line.startswith('>GNA11'):
 		continue
 
 	words = line.split()

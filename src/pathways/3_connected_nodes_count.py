@@ -2,7 +2,7 @@ import pprint
 
 counts = {}
 
-with open('connected_nodes.txt', 'r') as filehandle:
+with open('GNA11_connected.txt', 'r') as filehandle:
     
     for i in filehandle:
 

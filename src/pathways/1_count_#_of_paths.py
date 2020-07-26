@@ -1,4 +1,4 @@
-fhand = open('BioGRID_Human_Interactome_KRAS_results.txt')
+fhand = open('FGFR3_PathwayCommons_directed.txt')
 
 count = 0
 
